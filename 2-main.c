@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -7,16 +6,15 @@
  *
  * Return: Always 0.
  */
-int main(int ac, char **av)
+int main(void)
 {
-    int res;
+    int n;
 
-    if (ac != 3)
-    {
-        dprintf(2, "Usage: %s filename text\n", av[0]);
-        exit(1);
-    }
-    res = append_text_to_file(av[1], av[2]);
-    printf("-> %i)\n", res);
+    n = get_bit(1024, 10);
+    printf("%d\n", n);
+    n = get_bit(98, 1);
+    printf("%d\n", n);
+    n = get_bit(1024, 0);
+    printf("%d\n", n);
     return (0);
 }
